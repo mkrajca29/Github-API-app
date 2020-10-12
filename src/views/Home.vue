@@ -1,12 +1,12 @@
 <template>
   <div class="home">
     <article>
-      <div class="card mb-3" style="max-width: 540px;">
+      <div class="card mb-3 border" style="max-width: 540px;">
         <div class="row no-gutters">
           <div class="col-md-4">
             <img :src="this.avatar" class="card-img" alt="Avatar" />
           </div>
-          <div class="col-md-8">
+          <div class="col-md-8 align-self-center">
             <div class="card-body">
               <h5 class="card-title">
                 {{ this.fullName }} ({{ this.author }})

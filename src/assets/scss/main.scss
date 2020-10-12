@@ -1,17 +1,46 @@
-$body-bg: #d9d6d2;
-$card-color: #0d0d0d;
-$card-cap-bg: #5d6d73;
-$card-cap-color: brown;
-$card-bg: #d9d6d2;
-/* $nav-tabs-border-color: red; */
+@import "../scss/custom-variables";
+
+$body-bg: $custom-soft;
+$card-color: $custom-soft;
+$card-cap-bg: $custom-blue-soft;
+$card-bg: $custom-blue-dark;
+$nav-tabs-link-active-color: $custom-blue-dark;
+$border-color: $custom-soft;
+$border-width: 2px;
 
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
 .card-body-element {
   background: #c2c0bd;
-  background: linear-gradient(139deg, #c2c0bd 29%, #202426 82%);
+  background: linear-gradient(
+    139deg,
+    $custom-blue-middle 29%,
+    $custom-blue-dark 82%
+  );
 }
 
-.repoName {
-  background-color: #d9d6d2;
+ul {
+  margin: 5px;
+  padding: 0;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+a {
+  color: $custom-soft;
+
+  &:hover {
+    color: lighten($custom-blue-middle, 30%);
+  }
+}
+
+.icon {
+  width: 16px;
+}
+
+.data-list {
+  color: black;
+  margin: 10px;
 }

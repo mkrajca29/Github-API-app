@@ -2,7 +2,7 @@
   <div id="app">
     <div id="nav">
       <b-card-header header-tag="nav">
-        <b-nav card-header tabs class="text-center">
+        <b-nav card-header tabs class="text-center justify-content-center">
           <b-nav-item to="/" exact exact-active-class="active">Home</b-nav-item>
           <b-nav-item to="/about" exact exact-active-class="active">
             About
@@ -33,24 +33,11 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 
 #nav {
   a {
     font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-ul {
-  margin: 5px;
-  padding: 0;
-  li {
-    list-style-type: none;
   }
 }
 </style>

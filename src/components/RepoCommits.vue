@@ -1,7 +1,8 @@
 <template>
   <ul>
-    <li>
-      {{ this.reposData[this.index].commit[this.commitIndex].author.name }} :
+    <li class="data-list">
+      <img class="icon" src="../assets/commit_icon.png" alt="Commit icon" />
+      {{ this.reposData[this.index].commit[this.commitIndex].author.name }}:
       {{ this.reposData[this.index].commit[this.commitIndex].message }}
     </li>
   </ul>
@@ -24,4 +25,6 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import "../assets/scss/main";
+</style>
