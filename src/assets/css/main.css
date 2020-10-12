@@ -1,0 +1,12 @@
+/* $nav-tabs-border-color: red; */
+/* @import "../../../node_modules/bootstrap/scss/bootstrap.scss"; */
+.card-body-element {
+  background: #5d6d73;
+  background: linear-gradient(139deg, #5d6d73 29%, #202426 82%);
+}
+
+.repoName {
+  background-color: #d9d6d2;
+}
+
+/*# sourceMappingURL=main.css.map */
