@@ -2,7 +2,11 @@
   <div id="app">
     <div id="nav">
       <b-card-header header-tag="nav">
-        <b-nav card-header tabs class="text-center justify-content-center">
+        <b-nav
+          card-header
+          tabs
+          class="border-bottom text-center justify-content-center"
+        >
           <b-nav-item to="/" exact exact-active-class="active">Home</b-nav-item>
           <b-nav-item to="/about" exact exact-active-class="active">
             About
@@ -28,6 +32,7 @@ export default {
 </script>
 
 <style lang="scss">
+@import "./src/assets/scss/main";
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

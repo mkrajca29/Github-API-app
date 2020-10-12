@@ -1,14 +1,14 @@
 <template>
   <ul>
     <article
-      class=" card mb-2 p-2 border"
+      class=" card mb-2 p-2 border zoomIn"
       style="max-width: 540px;"
       @click="clicked = clicked ? false : true"
     >
       {{ repoName }}
     </article>
     <div class="repoData">
-      <ul class="dataContainer m-3 p-3" v-if="clicked">
+      <ul class="dataContainer m-3 p-3 pulse zoomIn" v-if="clicked">
         <h6>BRANCHES ({{ this.reposData[index].branch.length }}):</h6>
         <li
           class="data-list"
@@ -19,7 +19,7 @@
           {{ item }}
         </li>
       </ul>
-      <ul class="dataContainer m-3 p-3" v-if="clicked">
+      <ul class="dataContainer m-3 p-3 zoomIn" v-if="clicked">
         <h6>COMMITS ({{ this.reposData[index].commit.length }}):</h6>
         <RepoCommits
           v-for="(oneCommit, commitIndex) in this.reposData[index].commit"
@@ -80,7 +80,7 @@ article {
   max-width: 500px;
 
   .dataContainer {
-    background-color: $custom-red;
+    background-color: $custom-blue-dark;
     max-width: 540px;
   }
 }

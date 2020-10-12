@@ -1,10 +1,12 @@
 @import "../scss/custom-variables";
 
-$body-bg: $custom-soft;
+/* $body-bg: $custom-soft; */
+$body-bg: $custom-blue-dark;
 $card-color: $custom-soft;
 $card-cap-bg: $custom-blue-soft;
 $card-bg: $custom-blue-dark;
-$nav-tabs-link-active-color: $custom-blue-dark;
+$nav-tabs-link-active-color: $custom-soft;
+$nav-tabs-link-active-bg: $custom-blue-soft;
 $border-color: $custom-soft;
 $border-width: 2px;
 
@@ -36,11 +38,32 @@ a {
   }
 }
 
+h6 {
+  color: black;
+}
+
 .icon {
   width: 16px;
 }
 
 .data-list {
-  color: black;
+  color: $custom-soft;
   margin: 10px;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  animation-duration: 0.4s;
 }

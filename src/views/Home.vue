@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home shadow">
     <article>
       <div class="card mb-3 border" style="max-width: 540px;">
         <div class="row no-gutters">
@@ -65,6 +65,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.home {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 600px;
+}
 article {
   display: flex;
   justify-content: center;
