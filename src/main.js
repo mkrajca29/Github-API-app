@@ -3,7 +3,7 @@ import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-/* import "@/assets/scss/main.scss"; */
+import "@/assets/scss/main.scss";
 
 Vue.use(BootstrapVue);
 Vue.use(IconsPlugin);

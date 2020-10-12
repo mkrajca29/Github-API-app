@@ -9,6 +9,7 @@
     </article>
     <div class="repoData">
       <ul class="dataContainer" v-if="clicked">
+        <p>BRANCHES</p>
         <li v-for="item in this.reposData[index].branch" :key="item.id">
           {{ item }}
         </li>
@@ -70,10 +71,13 @@ li {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin: auto;
+  width: 500px;
 
-  /*   li {
-    width: 300px;
-  } */
+  li {
+    margin: 10px;
+    background-color: #fff;
+  }
 
   .dataContainer {
     background-color: rgb(161, 153, 153);

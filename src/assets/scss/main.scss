@@ -1,19 +1,15 @@
 $body-bg: #d9d6d2;
 $card-color: #0d0d0d;
-$card-cap-bg: #bf9e39;
+$card-cap-bg: #5d6d73;
 $card-cap-color: brown;
 $card-bg: #d9d6d2;
 /* $nav-tabs-border-color: red; */
 
-/* @import "../../../node_modules/bootstrap/scss/bootstrap.scss"; */
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
 .card-body-element {
-  background: #5d6d73;
-  background: linear-gradient(
-    139deg,
-    rgba(93, 109, 115, 1) 29%,
-    rgba(32, 36, 38, 1) 82%
-  );
+  background: #c2c0bd;
+  background: linear-gradient(139deg, #c2c0bd 29%, #202426 82%);
 }
 
 .repoName {

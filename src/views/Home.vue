@@ -19,7 +19,7 @@
         </div>
       </div>
     </article>
-    <h1>Repositories</h1>
+    <h1 class="mb-2">Repositories</h1>
     <Repository
       v-for="(repoName, index) in repoNames"
       :key="index"

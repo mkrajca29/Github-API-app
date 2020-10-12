@@ -1,7 +1,5 @@
 module.exports = {
-  css: {
-    requireModuleExtension: false
-  },
+
   publicPath:
     process.env.NODE_ENV === "production" ? "/'Github-API-project'/" : "/",
   chainWebpack: config => {
