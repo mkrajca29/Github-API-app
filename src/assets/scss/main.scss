@@ -1,6 +1,6 @@
 @import "../scss/custom-variables";
 
-/* $body-bg: $custom-soft; */
+$light: $custom-soft;
 $body-bg: $custom-blue-dark;
 $card-color: $custom-soft;
 $card-cap-bg: $custom-blue-soft;
@@ -8,7 +8,7 @@ $card-bg: $custom-blue-dark;
 $nav-tabs-link-active-color: $custom-soft;
 $nav-tabs-link-active-bg: $custom-blue-soft;
 $border-color: $custom-soft;
-$border-width: 2px;
+$border-width: 1px;
 
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
@@ -17,7 +17,7 @@ $border-width: 2px;
   background: linear-gradient(
     139deg,
     $custom-blue-middle 29%,
-    $custom-blue-dark 82%
+    darken($custom-blue-middle, 20%) 82%
   );
 }
 
@@ -39,7 +39,7 @@ a {
 }
 
 h6 {
-  color: black;
+  color: $custom-blue-middle;
 }
 
 .icon {

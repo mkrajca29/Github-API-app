@@ -1,6 +1,6 @@
 <template>
-  <div class="home shadow">
-    <article>
+  <div class="home mx-auto shadow">
+    <article class="d-flex justify-content-center">
       <div class="card mb-3 border" style="max-width: 540px;">
         <div class="row no-gutters">
           <div class="col-md-4">
@@ -8,11 +8,9 @@
           </div>
           <div class="col-md-8 align-self-center">
             <div class="card-body">
-              <h5 class="card-title">
-                {{ this.fullName }} ({{ this.author }})
-              </h5>
+              <h5 class="card-title">{{ this.fullName }} ({{ user }})</h5>
               <p class="card-text">
-                Number of repositories: {{ repoNames.length }}
+                Number of public repositories: {{ repoNames.length }}
               </p>
             </div>
           </div>
@@ -31,7 +29,7 @@
     <section v-if="errored">
       <p>
         We're sorry, we're not able to retrieve this information at the moment,
-        please try back later
+        please try back later.
       </p>
     </section>
   </div>
@@ -46,7 +44,6 @@ export default {
   },
   data() {
     return {
-      author: "Inza",
       fullName: "Tomas Jukin",
       avatar: "https://avatars0.githubusercontent.com/u/103046?v=4"
     };
@@ -59,22 +56,15 @@ export default {
     ...mapState(["repoNames"]),
     ...mapState(["branches"]),
     ...mapState(["reposData"]),
-    ...mapState(["errored"])
+    ...mapState(["errored"]),
+    ...mapState(["user"])
   }
 };
 </script>
 
 <style lang="scss" scoped>
 .home {
-  margin: 0 auto;
   padding: 20px;
   max-width: 600px;
-}
-article {
-  display: flex;
-  justify-content: center;
-}
-h1 {
-  margin: 0;
 }
 </style>

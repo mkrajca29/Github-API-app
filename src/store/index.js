@@ -6,6 +6,7 @@ Vue.use(Vuex, axios);
 
 export default new Vuex.Store({
   state: {
+    user: "Inza",
     repoNames: [],
     reposData: [],
     errored: false
@@ -14,11 +15,14 @@ export default new Vuex.Store({
     SET_REPOS_NAMES(state, posts) {
       state.repoNames = posts;
     }
+    /* SET_REPOS_DATA(state, data) {
+      state.repoData = data;
+    } */
   },
   actions: {
     async getReposNames({ commit }) {
       await axios
-        .get(`https://api.github.com/users/Inza/repos`)
+        .get(`https://api.github.com/users/${this.state.user}/repos`)
         .then(response => {
           let repoNames = response.data.map(data => data.name);
           commit("SET_REPOS_NAMES", repoNames);
@@ -29,8 +33,8 @@ export default new Vuex.Store({
         });
 
       for (let index in this.state.repoNames) {
-        let one = `https://api.github.com/repos/Inza/${this.state.repoNames[index]}/branches`;
-        let two = `https://api.github.com/repos/Inza/${this.state.repoNames[index]}/commits?per_page=10`;
+        let one = `https://api.github.com/repos/${this.state.user}/${this.state.repoNames[index]}/branches`;
+        let two = `https://api.github.com/repos/${this.state.user}/${this.state.repoNames[index]}/commits?per_page=10`;
 
         const requestOne = axios.get(one);
         const requestTwo = axios.get(two);
@@ -45,10 +49,14 @@ export default new Vuex.Store({
               let commits = responseTwo.data.map(data => data.commit);
 
               this.state.reposData[index] = {
-                /* name: this.state.repoNames[index], */
                 branch: branches,
                 commit: commits
               };
+              /* let repoData = {
+                branch: branches,
+                commit: commits
+              };
+              commit("SET_REPOS_DATA", repoData[index]); */
             })
           )
           .catch(error => {

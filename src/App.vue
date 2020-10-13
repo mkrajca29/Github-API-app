@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app text-center">
     <div id="nav">
       <b-card-header header-tag="nav">
         <b-nav
@@ -26,23 +26,10 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 
 export default {
-  name: "App",
-  components: {}
+  name: "App"
 };
 </script>
 
 <style lang="scss">
 @import "./src/assets/scss/main";
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-}
-
-#nav {
-  a {
-    font-weight: bold;
-  }
-}
 </style>

@@ -5,10 +5,10 @@
       style="max-width: 540px;"
       @click="clicked = clicked ? false : true"
     >
-      {{ repoName }}
+      <p class="m-0 p-0">{{ repoName }}</p>
     </article>
-    <div class="repoData">
-      <ul class="dataContainer m-3 p-3 pulse zoomIn" v-if="clicked">
+    <div class="repoData d-flex flex-column justify-content-center mx-auto">
+      <ul class="dataContainer m-3 p-3 pulse zoomIn shadow" v-if="clicked">
         <h6>BRANCHES ({{ this.reposData[index].branch.length }}):</h6>
         <li
           class="data-list"
@@ -19,7 +19,7 @@
           {{ item }}
         </li>
       </ul>
-      <ul class="dataContainer m-3 p-3 zoomIn" v-if="clicked">
+      <ul class="dataContainer m-3 p-3 zoomIn shadow" v-if="clicked">
         <h6>COMMITS ({{ this.reposData[index].commit.length }}):</h6>
         <RepoCommits
           v-for="(oneCommit, commitIndex) in this.reposData[index].commit"
@@ -68,20 +68,13 @@ article {
     font-weight: bold;
     background-color: lighten($custom-blue-middle, 10%);
   }
-  font: {
-    size: 16px;
-  }
 }
 .repoData {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: auto;
-  max-width: 500px;
+  max-width: $max-width-value;
 
   .dataContainer {
     background-color: $custom-blue-dark;
-    max-width: 540px;
+    max-width: $max-width-value;
   }
 }
 </style>
