@@ -1,7 +1,7 @@
 module.exports = {
 
   publicPath:
-    process.env.NODE_ENV === "production" ? "/'Github-API-project'/" : "/",
+    process.env.NODE_ENV === "production" ? "/Github-API-project/" : "/",
   chainWebpack: config => {
     config.module
       .rule("eslint")
